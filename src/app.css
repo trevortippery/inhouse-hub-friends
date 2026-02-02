@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+
+/* Variables */
+@theme {
+	--font-primary: 'Roboto', sans-serif;
+	--font-secondary: 'Nunito sans', sans-serif;
+	--h1: 600 2rem/1.2em var(--font-secondary);
+	--p: 1rem/1.2em var(--font-primary);
+	--h2: 400 1.5rem/1.2em var(--font-secondary);
+}
+
+@layer utilities {
+	.font-h1 {
+		font: var(--h1);
+		@apply my-2;
+	}
+	.font-h2 {
+		font: var(--h2);
+		@apply my-2;
+	}
+	.font-p {
+		@apply my-2;
+	}
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		text-wrap: balance;
+		font: var(--p);
+		@apply bg-neutral-900 text-neutral-100;
+	}
+	h1 {
+		font: var(--h1);
+		@apply my-2;
+	}
+	h2 {
+		font: var(--h2);
+		@apply my-2;
+	}
+	p {
+		@apply my-2;
+	}
+	a {
+		@apply text-neutral-100 no-underline;
+	}
+	a:hover {
+		@apply text-neutral-300;
+	}
+	.btn,
+	button {
+		background-color: oklch(0.215 0 0);
+		@apply inline-block my-2 py-2 px-4 rounded-md cursor-pointer
+			border border-neutral-700;
+	}
+	.btn:hover,
+	button:hover {
+		@apply border-neutral-100 transition ease-in-out duration-200 bg-neutral-900;
+	}
+	img {
+		@apply w-full;
+	}
+	section {
+		@apply w-11/12 max-w-1080 mx-auto;
+	}
+	nav {
+		@apply border-b-neutral-700 border-b;
+	}
+	input,
+	textarea,
+	select {
+		font: var(--p);
+		background-color: oklch(0.215 0 0);
+		@apply block border border-neutral-700 rounded-sm p-2 w-full mt-1;
+	}
+	input:hover,
+	textarea:hover,
+	select:hover {
+		@apply border-neutral-100 transition ease-in-out duration-200;
+	}
+	input:focus,
+	textarea:focus,
+	select:focus {
+		outline: none;
+		@apply border-neutral-100;
+	}
+	label {
+		font: var(--h2);
+		@apply block w-full mb-2;
+	}
+}
