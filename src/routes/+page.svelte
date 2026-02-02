@@ -6,10 +6,10 @@
 	import { resolve } from '$app/paths';
 
 	const screenshots = [
-		'/src/lib/assets/images/dashboard-1.png',
-		'/src/lib/assets/images/dashboard-2.png',
-		'/src/lib/assets/images/dashboard-3.png',
-		'/src/lib/assets/images/dashboard-4.png'
+		'/images/dashboard-1.png',
+		'/images/dashboard-2.png',
+		'/images/dashboard-3.png',
+		'/images/dashboard-4.png'
 	];
 
 	let current = 0;
